@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /macros/latex/contrib/numprint
+# catalog-date 2008-02-17 21:10:24 +0100
+# catalog-license lppl
+# catalog-version 1.38
 Name:		texlive-numprint
 Version:	1.38
 Release:	1
@@ -68,6 +74,7 @@ be added before and after the formatted number.
 %doc %{_texmfdistdir}/source/latex/numprint/numprint.dtx
 %doc %{_texmfdistdir}/source/latex/numprint/numprint.ins
 %doc %{_texmfdistdir}/source/latex/numprint/numprint032.dtx
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -78,3 +85,5 @@ be added before and after the formatted number.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
