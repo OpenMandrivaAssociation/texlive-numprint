@@ -6,7 +6,7 @@
 # catalog-version 1.38
 Name:		texlive-numprint
 Version:	1.38
-Release:	1
+Release:	2
 Summary:	Print numbers with separators and exponent if necessary
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/numprint
