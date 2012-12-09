@@ -1,12 +1,12 @@
-# revision 27498
+# revision 15878
 # category Package
 # catalog-ctan /macros/latex/contrib/numprint
-# catalog-date 2012-08-22 15:46:20 +0200
+# catalog-date 2008-02-17 21:10:24 +0100
 # catalog-license lppl
-# catalog-version 1.39
+# catalog-version 1.38
 Name:		texlive-numprint
-Version:	1.39
-Release:	1
+Version:	1.38
+Release:	2
 Summary:	Print numbers with separators and exponent if necessary
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/numprint
@@ -50,14 +50,16 @@ be added before and after the formatted number.
 %{_texmfdistdir}/tex/latex/numprint/numprint032.sty
 %doc %{_texmfdistdir}/doc/latex/numprint/ChangeLog.nbaseprt
 %doc %{_texmfdistdir}/doc/latex/numprint/ChangeLog.numprint
-%doc %{_texmfdistdir}/doc/latex/numprint/Makefile
 %doc %{_texmfdistdir}/doc/latex/numprint/README
 %doc %{_texmfdistdir}/doc/latex/numprint/getversion.tex
 %doc %{_texmfdistdir}/doc/latex/numprint/nbaseprt.pdf
+%doc %{_texmfdistdir}/doc/latex/numprint/nbaseprt.xml
 %doc %{_texmfdistdir}/doc/latex/numprint/nbaseprttest.tex
 %doc %{_texmfdistdir}/doc/latex/numprint/numprint.pdf
+%doc %{_texmfdistdir}/doc/latex/numprint/numprint.xml
 %doc %{_texmfdistdir}/doc/latex/numprint/numprinttest.tex
 #- source
+%doc %{_texmfdistdir}/source/latex/numprint/Makefile
 %doc %{_texmfdistdir}/source/latex/numprint/nbaseprt.dtx
 %doc %{_texmfdistdir}/source/latex/numprint/numprint.dtx
 %doc %{_texmfdistdir}/source/latex/numprint/numprint.ins
@@ -72,3 +74,17 @@ be added before and after the formatted number.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.38-2
++ Revision: 754450
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.38-1
++ Revision: 719145
+- texlive-numprint
+- texlive-numprint
+- texlive-numprint
+- texlive-numprint
+
