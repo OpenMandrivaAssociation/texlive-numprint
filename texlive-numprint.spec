@@ -1,19 +1,13 @@
-# revision 27498
-# category Package
-# catalog-ctan /macros/latex/contrib/numprint
-# catalog-date 2012-08-22 15:46:20 +0200
-# catalog-license lppl
-# catalog-version 1.39
 Name:		texlive-numprint
-Version:	1.39
-Release:	10
+Version:	27498
+Release:	1
 Summary:	Print numbers with separators and exponent if necessary
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/numprint
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/numprint.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/numprint.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/numprint.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/numprint.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/numprint.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/numprint.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -36,12 +30,12 @@ supported using all features of numprint. Additional text can
 be added before and after the formatted number.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -65,28 +59,11 @@ be added before and after the formatted number.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Mon Oct 29 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.39-1
-+ Revision: 820521
-- Update to latest release.
-
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.38-2
-+ Revision: 754450
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.38-1
-+ Revision: 719145
-- texlive-numprint
-- texlive-numprint
-- texlive-numprint
-- texlive-numprint
-
