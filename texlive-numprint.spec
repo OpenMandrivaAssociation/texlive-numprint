@@ -3,7 +3,7 @@ Version:	27498
 Release:	2
 Summary:	Print numbers with separators and exponent if necessary
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/numprint
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/numprint
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/numprint.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/numprint.doc.r%{version}.tar.xz
